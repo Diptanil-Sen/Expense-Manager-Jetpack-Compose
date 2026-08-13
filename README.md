@@ -23,8 +23,6 @@ Managing day-to-day finances is often scattered across notes apps, bank SMS aler
 |-------------|--------------|
 | ![Empty](screenshots/analysis_empty.png) | ![Notification](screenshots/notification.png) |
 
-*(Replace the paths above with your own screenshots — see "Adding Screenshots" below)*
-
 ## 🚀 Key Features
 
 - **Full transaction CRUD** — add, edit, and delete income, expense, and transfer entries
@@ -69,7 +67,7 @@ This project follows **MVVM (Model–View–ViewModel)** with a repository layer
 ## ⚙️ Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/expense-tracker.git
+git clone https://github.com/Diptanil-Sen/Expense-Manager-Jetpack-Compose.git
 ```
 1. Open the project in Android Studio (latest stable version recommended)
 2. Let Gradle sync complete

@@ -42,3 +42,50 @@ Managing day-to-day finances is often scattered across notes apps, bank SMS aler
 ## 🧠 Architecture
 
 This project follows **MVVM (Model–View–ViewModel)** with a repository layer, keeping data, business logic, and UI cleanly separated and independently testable.
+
+**Model layer** — `Transaction` data class, `AppDatabase`, `TransactionDao` for local queries, and `TransactionRepository` abstracting data access away from the ViewModel.
+
+**ViewModel layer** — `TransactionViewModel` exposes UI state via `StateFlow`, computes derived values like running balance, and triggers notification logic based on transaction changes.
+
+**View layer** — Composable screens:
+- `HomeScreen` — balance overview, income/expense summary, recent transactions
+- `AddTransactionScreen` — form for logging a transaction with category and payment mode
+- `AnalysisScreen` — monthly insights with category-wise pie charts
+
+**Supporting components** — `WorkManager` for scheduled background checks, `NotificationHelper` for managing notification channels and alert triggers.
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|---|---|
+| Language | Kotlin |
+| UI | Jetpack Compose, Material 3 |
+| Architecture | MVVM, Repository Pattern |
+| Persistence | Room Database |
+| Async | Kotlin Coroutines, StateFlow |
+| Charts | MPAndroidChart |
+| Background Work | WorkManager |
+
+## ⚙️ Getting Started
+
+```bash
+git clone https://github.com/<your-username>/expense-tracker.git
+```
+1. Open the project in Android Studio (latest stable version recommended)
+2. Let Gradle sync complete
+3. Run on an emulator or physical device
+
+## 📌 What This Project Demonstrates
+
+- Structuring a Compose app with clean MVVM separation
+- Local database design and CRUD operations with Room
+- Reactive state management using StateFlow
+- Scheduling background work and triggering system notifications
+- Data visualization within a mobile UI
+
+## 🔭 Possible Future Improvements
+
+- Cloud backup/sync across devices
+- CSV/PDF export of transaction history
+- Multi-currency support
+- Recurring transaction templates
